@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <title>
+        {{#if title}}
+            {{title}}
+        {{else}}
+            Kalles Dirty Thirty
+        {{/if}}
+    </title>
+
+    <!-- General Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="title" content="Alle gegen Wix">
+    <meta name="description" content="Alle gegen Wix">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Miessner KG"/>
+    <meta property="og:url" content="https://miessner-kg.de/"/>
+    <meta property="og:image" content="https://miessner-kg.de/images/sharetag.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description"
+          content="Wir sind die Miessner KG"/>
+    <meta property="og:locale" content="de_DE"/>
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:url" content="https://miessner-kg.de/">
+    <meta property="twitter:title" content="Miessner KG">
+    <meta property="twitter:description"
+          content="Miessner KG">
+    <meta property="twitter:image" content="https://miessner-kg.de/images/sharetag.jpg">
+
+    <link rel="stylesheet" href="Css/main.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../Images/favicon.ico">
+</head>
+
+<body>
+<header>
+</header>
+<main class=" {{pageClass}}">
+    {{#> content-block}}
+    {{/content-block}}
+</main>
+
+{{#> scripts-block}}
+    <script src="JavaScript/bundle.js"></script>
+    <script data-swup-reload-script src="JavaScript/app.js"></script>
+{{/scripts-block}}
+
+<!-- Matomo -->
+<script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+    _paq.push(["setDomains", ["*.www.miessner-kg.de"]]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+</script>
+
+</body>
+
+</html>

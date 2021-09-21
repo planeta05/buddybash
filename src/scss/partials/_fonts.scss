@@ -1,0 +1,27 @@
+@font-face{
+    font-family: 'FivoSans-Regular';
+    src: url('../Font/FivoSans-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+};
+
+@font-face{
+    font-family: 'FivoSans-Light';
+    src: url('../Font/FivoSans-Light.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+};
+
+@font-face{
+    font-family: 'FivoSans-Bold';
+    src: url('../Font/FivoSans-Bold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+};
+
+/*
+ * PRIMARY FONT // FIVO SANS
+ */
+$font-regular: "FivoSans-Regular", sans-serif;
+$font-light: "FivoSans-Light", sans-serif;
+$font-bold: "FivoSans-Bold", sans-serif;

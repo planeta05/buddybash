@@ -1,0 +1,217 @@
+body,
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+body {
+    word-wrap: break-word;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+
+/*
+ * STAGE
+ */
+
+.stage {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    position: relative;
+    background-position: 20% 20%;
+
+    .logo {
+        width: 30vw;
+        height: auto;
+        position: absolute;
+        top: 12vh;
+        left: 12vw;
+    }
+
+    .countdown-wrap {
+        position: relative;
+        top: 60vh;
+
+        #countdown {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+
+            ul {
+                padding: 0;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                li {
+                    display: inline-block;
+                    font-size: 10px;
+                    list-style-type: none;
+                    text-transform: uppercase;
+                    color: #fff;
+                    text-align: center;
+                    width: 24%;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    letter-spacing: 2px;
+                    font-weight: 800;
+
+                    span {
+                        display: block;
+                        font-size: 40px;
+                        position: relative;
+                        font-weight: 800;
+                        letter-spacing: 0;
+                        padding: 20px 0 30px;
+
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            height: 100px;
+                            background-color: #CA1F1F;
+                            position: absolute;
+                            display: flex;
+                            z-index: -1;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .emoji {
+            display: none;
+            padding: 1rem;
+
+            span {
+                font-size: 4rem;
+                padding: 0 .5rem;
+            }
+        }
+
+        .wix {
+            width: 126vw;
+            height: auto;
+            position: absolute;
+            bottom: 42px;
+            right: -40vw;
+        }
+    }
+
+    .people {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        filter: drop-shadow(0px 4px 120px rgba(0, 0, 0, 0.8));
+    }
+}
+
+
+
+
+
+
+
+
+/*
+ * SPACINGS
+ */
+
+.sb-xs {
+  padding-top: 40px;
+}
+
+.sb-sm {
+  padding-top: 70px;
+}
+
+.sb-md {
+  padding-top: 100px;
+}
+
+.sb-lg {
+  padding-top: 150px;
+}
+
+.sb-xl {
+  padding-top: 200px;
+}
+
+.sa-xs {
+  padding-bottom: 40px;
+}
+
+.sa-sm {
+  padding-bottom: 70px;
+}
+
+.sa-md {
+  padding-bottom: 100px;
+}
+
+.sa-lg {
+  padding-bottom: 150px;
+}
+
+.sa-xl {
+  padding-bottom: 200px;
+}
+
+
+/*
+ * BACKGROUND POSITIONS
+ */
+
+.bg-top-left {
+  background-position: top left;
+}
+
+.bg-top-center {
+  background-position: top center;
+}
+
+.bg-top-right {
+  background-position: top right;
+}
+
+.bg-center-left {
+  background-position: center left;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-center-right {
+  background-position: center right;
+}
+
+.bg-bottom-left {
+  background-position: bottom left;
+}
+
+.bg-bottom-center {
+  background-position: bottom center;
+}
+
+.bg-bottomp-right {
+  background-position: bottom right;
+}

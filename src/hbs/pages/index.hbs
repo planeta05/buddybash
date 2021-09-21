@@ -1,0 +1,62 @@
+{{#> layouts/base title="Alle gegen Wix" pageClass="index"}}
+    {{#*inline "content-block"}}
+        <div class="stage">
+            <img class="logo" src="./images/logo-wix.svg">
+
+            <div class="countdown-wrap">
+                <div id="countdown">
+                    <ul>
+                        <li><span id="days"></span>TAGE</li>
+                        <li><span id="hours"></span>STUNDEN</li>
+                        <li><span id="minutes"></span>MINUTEN</li>
+                        <li><span id="seconds"></span>SEKUNDEN</li>
+                    </ul>
+                </div>
+                <div id="content" class="emoji">
+                    <span>🥳</span>
+                    <span>🎉</span>
+                    <span>🎂</span>
+                </div>
+                <img class="wix" src="./images/karl.png">
+            </div>
+
+            <img class="people" src="./images/people.png">
+        </div>
+    {{/inline}}
+{{/layouts/base}}
+
+<script>
+    (function () {
+    const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+    let birthday = "Oct 03, 2021 17:30:00",
+            countDown = new Date(birthday).getTime(),
+            x = setInterval(function() {
+
+                let now = new Date().getTime(),
+                        distance = countDown - now;
+
+                document.getElementById("days").innerText = Math.floor(distance / (day)),
+                        document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                        document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                        document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+                //do something later when date is reached
+                if (distance < 0) {
+                    let headline = document.getElementById("headline"),
+                            countdown = document.getElementById("countdown"),
+                            content = document.getElementById("content");
+
+                    headline.innerText = "It's my birthday!";
+                    countdown.style.display = "none";
+                    content.style.display = "block";
+
+                    clearInterval(x);
+                }
+                //seconds
+            }, 0)
+}());
+</script>

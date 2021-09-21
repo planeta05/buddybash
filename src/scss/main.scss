@@ -1,0 +1,14 @@
+/*
+ * VENDOR
+ */
+@import './node_modules/bootstrap/scss/bootstrap';
+@import 'vendor/swiper.min';
+/*
+ * MIXINS
+ */
+@import 'mixins/include-fonts';
+/*
+ * PARTIALS
+ */
+@import 'partials/fonts';
+@import 'partials/layout';

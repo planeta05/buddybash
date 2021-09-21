@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <title>
+            Alle gegen Wix
+    </title>
+
+    <!-- General Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="title" content="Alle gegen Wix">
+    <meta name="description" content="Alle gegen Wix">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Miessner KG"/>
+    <meta property="og:url" content="https://miessner-kg.de/"/>
+    <meta property="og:image" content="https://miessner-kg.de/images/sharetag.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description"
+          content="Wir sind die Miessner KG"/>
+    <meta property="og:locale" content="de_DE"/>
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:url" content="https://miessner-kg.de/">
+    <meta property="twitter:title" content="Miessner KG">
+    <meta property="twitter:description"
+          content="Miessner KG">
+    <meta property="twitter:image" content="https://miessner-kg.de/images/sharetag.jpg">
+
+    <link rel="stylesheet" href="Css/main.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../Images/favicon.ico">
+</head>
+
+<body>
+<header>
+</header>
+<main class=" index">
+        <div class="stage">
+            <img class="logo" src="./images/logo-wix.svg">
+
+            <div class="countdown-wrap">
+                <div id="countdown">
+                    <ul>
+                        <li><span id="days"></span>TAGE</li>
+                        <li><span id="hours"></span>STUNDEN</li>
+                        <li><span id="minutes"></span>MINUTEN</li>
+                        <li><span id="seconds"></span>SEKUNDEN</li>
+                    </ul>
+                </div>
+                <div id="content" class="emoji">
+                    <span>🥳</span>
+                    <span>🎉</span>
+                    <span>🎂</span>
+                </div>
+                <img class="wix" src="./images/karl.png">
+            </div>
+
+            <img class="people" src="./images/people.png">
+        </div>
+</main>
+
+    <script src="JavaScript/bundle.js"></script>
+    <script data-swup-reload-script src="JavaScript/app.js"></script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+    _paq.push(["setDomains", ["*.www.miessner-kg.de"]]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+</script>
+
+</body>
+
+</html>
+
+<script>
+    (function () {
+    const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+    let birthday = "Oct 03, 2021 17:30:00",
+            countDown = new Date(birthday).getTime(),
+            x = setInterval(function() {
+
+                let now = new Date().getTime(),
+                        distance = countDown - now;
+
+                document.getElementById("days").innerText = Math.floor(distance / (day)),
+                        document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                        document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                        document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+                //do something later when date is reached
+                if (distance < 0) {
+                    let headline = document.getElementById("headline"),
+                            countdown = document.getElementById("countdown"),
+                            content = document.getElementById("content");
+
+                    headline.innerText = "It's my birthday!";
+                    countdown.style.display = "none";
+                    content.style.display = "block";
+
+                    clearInterval(x);
+                }
+                //seconds
+            }, 0)
+}());
+</script>

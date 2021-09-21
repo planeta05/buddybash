@@ -1,0 +1,88 @@
+{
+  "name": "cp-env",
+  "version": "1.0.0",
+  "description": "CP/COMPARTNER dev env",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "CPCOMPARTNER",
+  "license": "ISC",
+  "dependencies": {
+    "@swup/scripts-plugin": "^1.1.0",
+    "@swup/slide-theme": "^1.0.5",
+    "@vimeo/player": "^2.11.0",
+    "aos": "^2.2.0",
+    "bootstrap": "4.3.1",
+    "bootstrap-daterangepicker": "^3.0.5",
+    "chart.js": "^2.9.3",
+    "decimal.js": "^3.0.1",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "gsap": "^3.2.6",
+    "jcf": "^1.2.3",
+    "jquery": "^3.5.1",
+    "jquery-typeahead": "^2.11.0",
+    "jsrender": "^1.0.6",
+    "lightbox2": "^2.11.1",
+    "modularscale-sass": "^3.0.10",
+    "multiple-select": "^1.5.2",
+    "natives": "^1.1.6",
+    "normalize.css": "^8.0.1",
+    "npm-check-updates": "^3.2.2",
+    "object-fit-images": "^3.2.4",
+    "pageable": "^0.6.8",
+    "popper.js": "^1.16.1",
+    "rellax": "^1.12.1",
+    "scrollmagic": "^2.0.7",
+    "swiper": "^5.3.8",
+    "swup": "^2.0.11",
+    "typi": "^3.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "autoprefixer": "^9.7.6",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+		"gulp-autoprefixer": "^6.1.0",
+		"gulp-changed": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+		"gulp-purgecss": "^4.0.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "node-normalize-scss": "^8.0.1",
+    "postcss-loader": "^3.0.0",
+    "pump": "^3.0.0",
+    "require-dir": "^1.2.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 5 versions",
+    "not ie <= 8"
+  ],
+  "scripts": {
+		"build": "gulp build",
+		"watch": "gulp watch",
+		"assets": "gulp assets",
+		"hbs": "gulp hbs",
+		"css": "gulp css",
+		"js": "gulp js",
+		"babel": "gulp babel",
+		"copy": "gulp copy"
+  }
+}
